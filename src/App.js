@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  Container
+} from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
+import NavBar from './components/NavBar'
+import IssueList from './components/IssueList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container>
+        <NavBar/>
+        <Container
+        padding={50}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Text fontSize="20px">
+            Github issues
+          </Text>
+          <IssueList/>
+        </Container>
+    </Container>
+
   );
 }
 
