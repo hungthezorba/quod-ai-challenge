@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ChakraProvider, extendTheme, Grid, GridItem } from '@chakra-ui/react';
+import "@fontsource/athiti"
+import { Provider } from 'react-redux'
+
+import store from './store'
+
+const theme = extendTheme({
+  fonts: {
+    body: 'Athiti'
+  }
+})
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ChakraProvider theme={theme}>
+      <React.StrictMode>
+          <App />
+      </React.StrictMode>
+    </ChakraProvider>
+  </Provider>
+
+
+,
   document.getElementById('root')
 );
 

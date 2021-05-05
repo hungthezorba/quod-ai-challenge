@@ -4,3 +4,12 @@
     padding: 5px;
     border-radius: 1px;
 }
+
+.issueContainerHighlight {
+    border-color: #dedede;
+    border-bottom: 1px solid #dedede;
+    padding: 5px;
+    border-radius: 1px;
+    color: #68177b
+
+}
