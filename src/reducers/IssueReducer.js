@@ -2,7 +2,8 @@ const initialIssueState = {
     loading: false,
     issues: [],
     error: '' ,
-    counter: 0
+    counter: 0,
+    page: 1
 }
 
 const IssueReducer = (state=initialIssueState, action) => {
@@ -17,7 +18,8 @@ const IssueReducer = (state=initialIssueState, action) => {
                 ...state,
                 loading: false,
                 issues: action.payload,
-                error: ''
+                error: '',
+                page: state.page + 1
             }
         case 'FETCH_ISSUE_FAILURE':
             return {

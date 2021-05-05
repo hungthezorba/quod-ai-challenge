@@ -24,10 +24,10 @@ export const highlightIssue = (issueID) => {
     }
 }
 
-export function fetchIssue() {
+export function fetchIssue(page) {
     return dispatch => {
       dispatch(fetchIssueRequest());
-      return fetch("https://api.github.com/repos/rails/rails/issues?page=1&per_page=5")
+      return fetch(`https://api.github.com/repos/rails/rails/issues?page=${page}&per_page=5`)
         .then(res => res.json())
         .then(json => {
             console.log(json)
