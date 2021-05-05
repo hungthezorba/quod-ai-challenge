@@ -1,9 +1,12 @@
 import { Container } from '@chakra-ui/layout'
-import { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@chakra-ui/react"
+import { List, ListItem, ListIcon, OrderedList, UnorderedList, Button } from "@chakra-ui/react"
 import React from 'react'
 import Issue from './Issue'
+import { useSelector } from 'react-redux'
 
 const IssueList = () => {
+
+    const issues = useSelector(state => state.issues)
 
     return (
         <Container>
@@ -14,6 +17,9 @@ const IssueList = () => {
                 <Issue id="4819jd21" title="pofwpmvjgj2jgqm;fm;qm worlds"/>
                 <Issue id="3-0ru9021" title="gpgg02-gk2[kwm] worlds"/>
             </List>
+            <Button color="#68177b" marginTop="20px" borderColor="#68177b" variant="outline">
+                Next
+            </Button>
         </Container>
     )
 }

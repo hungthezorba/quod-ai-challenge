@@ -5,13 +5,13 @@ import styles from './NavBar.module.css'
 const NavBar = () => {
 
     return (
-        <Container className={styles.navBarContainer}>
+        <div className={styles.navBarContainer}>
             <Box>
                 <Text>
                     Quod AI Challenge
                 </Text>
             </Box>
-        </Container>
+        </div>
     )
 }
 

@@ -5,14 +5,14 @@ import styles from './Issue.module.css'
 const Issue = ({id, title}) => {
 
     return (
-        <Container className={styles.issueContainer}>
+        <div className={styles.issueContainer}>
             <Box>
                 <Text>#{id}</Text>
             </Box>
             <Box>
                 <Text>{title}</Text>
             </Box>
-        </Container>
+        </div>
     )
 }
 
