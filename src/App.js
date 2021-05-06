@@ -5,6 +5,7 @@ import { Text } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import IssueList from "./components/IssueList";
 import { useSelector } from 'react-redux'
+import RecentIssue from "./components/RecentIssue";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           </GridItem>
           <GridItem colSpan={1}>
             <Text fontSize="20px">Recent highlighted issues</Text>
+            <RecentIssue/>
           </GridItem>
         </Grid>
       </Container>

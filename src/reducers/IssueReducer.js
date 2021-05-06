@@ -3,7 +3,8 @@ const initialIssueState = {
     issues: [],
     error: '' ,
     counter: 0,
-    page: 1
+    page: 1,
+    recentHighlightIssues: []
 }
 
 const IssueReducer = (state=initialIssueState, action) => {
@@ -29,19 +30,24 @@ const IssueReducer = (state=initialIssueState, action) => {
             }
         
         case 'HIGHLIGHT_ISSUE':
-            var counter = state.counter+1
+            let issueHighlight;
             return {
                 ...state,
                 issues: state.issues.map(issue => {
                     if (issue.id == action.payload) {
                         issue['highlighted'] = true
+                        issueHighlight = issue;
                         return Object.assign({},
                             issue, {highlighted: true}
                         )
                     }
                     return Object.assign({}, issue, {highlighted: false})
                 }),
-                counter: counter
+                counter: state.counter + 1,
+                recentHighlightIssues: state.recentHighlightIssues.length >= 5 ? 
+                [issueHighlight].concat(state.recentHighlightIssues.slice(0,4))
+                : 
+                [issueHighlight].concat(state.recentHighlightIssues.slice(-state.recentHighlightIssues.length))
             }
         default:
             return state

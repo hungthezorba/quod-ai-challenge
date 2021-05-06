@@ -8,20 +8,17 @@ const Issue = ({id, title, isHighlight, inRecent}) => {
 
     const dispatch = useDispatch()
 
-    function highlight() {
-        dispatch(highlightIssue(id))
-        console.log('highlight: ', isHighlight)
-    }
 
     return (
-        <div className={!isHighlight? styles.issueContainer : styles.issueContainerHighlight}>
-            <Box>
-                <Text>#{id}</Text>
+        <div  className={styles.issueContainer}>
+            <Box onClick={() =>  dispatch(highlightIssue(id))} className={!isHighlight?'' : styles.highlight}>
+                <Box>
+                    <Text>#{id}</Text>
+                </Box>
+                <Box>
+                    <Text>{title}</Text>
+                </Box>
             </Box>
-            <Box>
-                <Text>{title}</Text>
-            </Box>
-            <button onClick={() => highlight()}>highlight</button>
         </div>
     )
 }
