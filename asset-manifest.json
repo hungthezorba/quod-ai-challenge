@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/quod-ai-challenge/static/css/main.a0e3fffb.chunk.css",
+    "main.js": "/quod-ai-challenge/static/js/main.02772733.chunk.js",
+    "main.js.map": "/quod-ai-challenge/static/js/main.02772733.chunk.js.map",
+    "runtime-main.js": "/quod-ai-challenge/static/js/runtime-main.cdb0f38b.js",
+    "runtime-main.js.map": "/quod-ai-challenge/static/js/runtime-main.cdb0f38b.js.map",
+    "static/css/2.8551de6e.chunk.css": "/quod-ai-challenge/static/css/2.8551de6e.chunk.css",
+    "static/js/2.4c7057bd.chunk.js": "/quod-ai-challenge/static/js/2.4c7057bd.chunk.js",
+    "static/js/2.4c7057bd.chunk.js.map": "/quod-ai-challenge/static/js/2.4c7057bd.chunk.js.map",
+    "static/js/3.04a8f001.chunk.js": "/quod-ai-challenge/static/js/3.04a8f001.chunk.js",
+    "static/js/3.04a8f001.chunk.js.map": "/quod-ai-challenge/static/js/3.04a8f001.chunk.js.map",
+    "index.html": "/quod-ai-challenge/index.html",
+    "static/css/2.8551de6e.chunk.css.map": "/quod-ai-challenge/static/css/2.8551de6e.chunk.css.map",
+    "static/css/main.a0e3fffb.chunk.css.map": "/quod-ai-challenge/static/css/main.a0e3fffb.chunk.css.map",
+    "static/js/2.4c7057bd.chunk.js.LICENSE.txt": "/quod-ai-challenge/static/js/2.4c7057bd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/quod-ai-challenge/static/media/athiti-vietnamese-400-normal.d5db6af2.woff2",
+    "static/media/logo.6ce24c58.svg": "/quod-ai-challenge/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cdb0f38b.js",
+    "static/css/2.8551de6e.chunk.css",
+    "static/js/2.4c7057bd.chunk.js",
+    "static/css/main.a0e3fffb.chunk.css",
+    "static/js/main.02772733.chunk.js"
+  ]
+}
