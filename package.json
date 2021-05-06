@@ -2,7 +2,7 @@
   "name": "quod-ai-challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/hungthezorba/quod-ai-challenge",
+  "homepage": "https://hungthezorba.github.io/quod-ai-challenge",
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.1.5",
