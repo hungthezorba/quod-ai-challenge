@@ -11,7 +11,8 @@ const Issue = ({id, title, isHighlight, inRecent}) => {
 
     return (
         <div  className={styles.issueContainer}>
-            <Box onClick={() =>  dispatch(highlightIssue(id))} className={!isHighlight?'' : styles.highlight}>
+            {/* If the issue is in recent list, user cannot have a event listener */}
+            <Box onClick={inRecent? null : () => dispatch(highlightIssue(id))} className={!isHighlight?'' : styles.highlight}>
                 <Box>
                     <Text>#{id}</Text>
                 </Box>

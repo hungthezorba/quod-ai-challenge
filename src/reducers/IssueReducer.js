@@ -4,7 +4,8 @@ const initialIssueState = {
     error: '' ,
     counter: 0,
     page: 1,
-    recentHighlightIssues: []
+    recentHighlightIssues: [],
+    notification: false
 }
 
 const IssueReducer = (state=initialIssueState, action) => {
@@ -44,10 +45,19 @@ const IssueReducer = (state=initialIssueState, action) => {
                     return Object.assign({}, issue, {highlighted: false})
                 }),
                 counter: state.counter + 1,
-                recentHighlightIssues: state.recentHighlightIssues.length >= 5 ? 
+                recentHighlightIssues: 
                 [issueHighlight].concat(state.recentHighlightIssues.slice(0,4))
-                : 
-                [issueHighlight].concat(state.recentHighlightIssues.slice(-state.recentHighlightIssues.length))
+            }
+        case 'TOGGLE_NOTIFICATION':
+            return {
+                ...state,
+                notification: !state.notification
+            }
+
+        case 'CLOSE_NOTIFICATION':
+            return {
+                ...state,
+                notification: false
             }
         default:
             return state

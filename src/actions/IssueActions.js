@@ -24,6 +24,18 @@ export const highlightIssue = (issueID) => {
     }
 }
 
+export const toggleNoti = () => {
+    return {
+        type: 'TOGGLE_NOTIFICATION'
+    }
+}
+
+export const closeNoti = () => {
+    return {
+        type: 'CLOSE_NOTIFICATION'
+    }
+}
+
 export function fetchIssue(page) {
     return dispatch => {
       dispatch(fetchIssueRequest());
