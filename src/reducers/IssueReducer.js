@@ -31,22 +31,24 @@ const IssueReducer = (state=initialIssueState, action) => {
             }
         
         case 'HIGHLIGHT_ISSUE':
-            let issueHighlight;
+            let counter = 0;
+            let issueHighlight=null;
             return {
                 ...state,
                 issues: state.issues.map(issue => {
-                    if (issue.id == action.payload) {
+                    if (issue.id == action.payload & issue.highlighted != true) {
                         issue['highlighted'] = true
                         issueHighlight = issue;
+                        counter = 1;
                         return Object.assign({},
                             issue, {highlighted: true}
                         )
                     }
                     return Object.assign({}, issue, {highlighted: false})
                 }),
-                counter: state.counter + 1,
-                recentHighlightIssues: 
-                [issueHighlight].concat(state.recentHighlightIssues.slice(0,4))
+                counter: state.counter<5?state.counter + counter:state.counter,
+                // Anoying coupling with condition.
+                recentHighlightIssues: issueHighlight!=null?[issueHighlight].concat(state.recentHighlightIssues.slice(0,4)) : state.recentHighlightIssues
             }
         case 'TOGGLE_NOTIFICATION':
             return {

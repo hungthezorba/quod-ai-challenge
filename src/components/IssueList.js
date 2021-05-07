@@ -15,7 +15,7 @@ const IssueList = () => {
 
     useEffect(() => {
         dispatch(fetchIssue(page))
-    }, [dispatch])
+    }, [])
  
     return (
         <Container>
