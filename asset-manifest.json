@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/quod-ai-challenge/static/css/main.afbe0945.chunk.css",
-    "main.js": "/quod-ai-challenge/static/js/main.02772733.chunk.js",
-    "main.js.map": "/quod-ai-challenge/static/js/main.02772733.chunk.js.map",
+    "main.js": "/quod-ai-challenge/static/js/main.9322a8b2.chunk.js",
+    "main.js.map": "/quod-ai-challenge/static/js/main.9322a8b2.chunk.js.map",
     "runtime-main.js": "/quod-ai-challenge/static/js/runtime-main.cdb0f38b.js",
     "runtime-main.js.map": "/quod-ai-challenge/static/js/runtime-main.cdb0f38b.js.map",
     "static/css/2.8551de6e.chunk.css": "/quod-ai-challenge/static/css/2.8551de6e.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.8551de6e.chunk.css",
     "static/js/2.4c7057bd.chunk.js",
     "static/css/main.afbe0945.chunk.css",
-    "static/js/main.02772733.chunk.js"
+    "static/js/main.9322a8b2.chunk.js"
   ]
 }
